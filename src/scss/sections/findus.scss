@@ -1,0 +1,51 @@
+@use "../utils" as *;
+@use "../general" as *;
+
+.contact {
+  padding: 0 rem(36);
+  margin-bottom: rem(60);
+
+  // find us wrapper styles
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(40) rem(100);
+
+    @include breakpoint-up(large) {
+      gap: rem(0) rem(200);
+    }
+  }
+
+  // ADDRESS, PHONE & EMAIL STYLES
+  &__text {
+    width: rem(220);
+  }
+
+  &__address,
+  &__phone,
+  &__email {
+    font-family: $roboto-f;
+    font-weight: normal;
+    font-size: rem(18);
+    line-height: rem(21);
+    text-align: center;
+    color: $review-gray;
+    margin-bottom: rem(20);
+  }
+
+  &__email {
+    margin-bottom: 0;
+  }
+
+  // GOOGLE MAP STYLES
+  &__map {
+    width: rem(300);
+    height: rem(190);
+
+    @include breakpoint-up(large) {
+      width: rem(394);
+    }
+  }
+}

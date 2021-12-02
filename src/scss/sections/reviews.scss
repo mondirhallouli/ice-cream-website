@@ -1,0 +1,49 @@
+@use "../general" as *;
+@use "../utils" as *;
+
+.reviews {
+  padding: 0 rem(36);
+  margin-bottom: rem(60);
+
+  // reviews container styles
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(40) rem(62);
+    flex-wrap: wrap;
+
+    @include breakpoint-up(large) {
+      gap: rem(40) rem(51);
+    }
+  }
+
+  // INDIVIDUAL REVIEW STYLES
+  &__sample {
+    width: rem(279);
+
+    // review text styles
+    blockquote {
+      font-family: $roboto-f;
+      font-style: italic;
+      font-weight: normal;
+      font-size: rem(16);
+      line-height: rem(19);
+      text-align: center;
+      color: $review-gray;
+      margin-bottom: rem(16);
+    }
+
+    // review person name styles
+    cite {
+      display: block;
+      font-family: $roboto-f;
+      font-style: normal;
+      font-weight: bold;
+      font-size: rem(18);
+      line-height: rem(21);
+      color: $medium-blue;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@keyframes slideIn {
+  0% {
+    right: -200%;
+    visibility: hidden;
+  }
+  100% {
+    right: 0;
+    visibility: visible;
+  }
+}

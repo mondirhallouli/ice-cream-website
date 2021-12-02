@@ -1,0 +1,18 @@
+@use "../utils" as *;
+
+.hide-on-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-on-desktop {
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+}
+
+.container {
+  max-width: rem(1110);
+  margin: 0 auto;
+}

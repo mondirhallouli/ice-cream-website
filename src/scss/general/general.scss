@@ -1,0 +1,60 @@
+@use "colors" as *;
+@use "typography" as *;
+@use "../utils" as *;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: $roboto-f;
+  transition: all 250ms ease-in-out;
+}
+
+// section title styles
+.section-header {
+  &__icon {
+    width: rem(55);
+    height: rem(55);
+    margin: 0 auto rem(10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__title {
+    font-family: $mont-f;
+    font-style: normal;
+    font-weight: $fw-b;
+    font-size: rem(28);
+    line-height: rem(34);
+    text-align: center;
+    margin-bottom: rem(50);
+    color: $dark-blue;
+
+    @include breakpoint-up(large) {
+      font-size: rem(36);
+    }
+  }
+}

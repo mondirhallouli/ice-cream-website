@@ -1,0 +1,99 @@
+@use "../utils" as *;
+@use "../general" as *;
+
+.footer {
+  padding: rem(60) rem(38);
+  background-color: $dark-blue;
+
+  // footer container styles
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(50) rem(200);
+
+    @include breakpoint-up(medium) {
+      justify-content: flex-start;
+      gap: rem(50) rem(160);
+    }
+
+    @include breakpoint-up(large) {
+      justify-content: center;
+      gap: rem(50) rem(144);
+    }
+  }
+
+  // footer about section styles
+  &__about {
+    width: rem(300);
+
+    @include breakpoint-up(large) {
+      width: rem(340);
+    }
+  }
+
+  // title styles for footer sections
+  &__title {
+    font-family: $roboto-f;
+    font-weight: $fw-b;
+    font-size: rem(18);
+    line-height: rem(21);
+    text-align: center;
+    color: $off-white;
+    margin-bottom: rem(20);
+
+    @include breakpoint-up(medium) {
+      text-align: left;
+    }
+    @include breakpoint-up(large) {
+      text-align: center;
+    }
+  }
+
+  // text styles for about section and address
+  &__text {
+    font-family: $roboto-f;
+    font-size: rem(16);
+    line-height: rem(19);
+    text-align: center;
+    color: $off-white;
+
+    @include breakpoint-up(medium) {
+      text-align: left;
+    }
+    @include breakpoint-up(large) {
+      text-align: center;
+    }
+  }
+
+  // MEDIA SECTION STYLES
+  &__media {
+    width: rem(132);
+  }
+
+  &__media-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: rem(23);
+  }
+
+  &__media-link {
+    display: block;
+    width: rem(34);
+    height: rem(34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__contact {
+    width: rem(180);
+  }
+}

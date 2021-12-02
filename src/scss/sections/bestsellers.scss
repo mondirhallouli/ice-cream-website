@@ -1,0 +1,111 @@
+@use "../general" as *;
+@use "../utils" as *;
+
+.sellers {
+  padding: 0 rem(36);
+  margin-bottom: rem(60);
+
+  // products container styles
+  &-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(32) rem(44);
+    flex-wrap: wrap;
+
+    @include breakpoint-up(medium) {
+      gap: rem(40) rem(60);
+    }
+
+    @include breakpoint-up(large) {
+      gap: rem(60) rem(90);
+    }
+  }
+
+  // INDIVIDUAL PRODUCT STYLES
+  &__option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint-up(medium) {
+      gap: 0 rem(16);
+    }
+
+    @include breakpoint-up(large) {
+      height: rem(300);
+    }
+  }
+
+  // individual product image styles
+  &__option-img {
+    width: rem(110);
+    height: rem(200);
+    display: flex;
+    align-items: center;
+
+    @include breakpoint-up(large) {
+      width: rem(166);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // PRODCUT PRICE & NAME STYLES
+  &__option-info {
+    width: rem(160);
+
+    @include breakpoint-up(large) {
+      width: rem(285);
+    }
+  }
+
+  // product name styles
+  &__option-title {
+    font-family: $mont-f;
+    font-style: normal;
+    font-weight: $fw-b;
+    font-size: rem(18);
+    line-height: rem(22);
+    text-align: center;
+    color: $medium-blue;
+    margin-bottom: rem(10);
+
+    @include breakpoint-up(large) {
+      font-size: rem(24);
+      line-height: rem(29);
+      margin-bottom: rem(16);
+      text-align: left;
+    }
+  }
+
+  // product price styles
+  &__option-price {
+    width: rem(160);
+    height: rem(60);
+    background: $red;
+    border-radius: rem(100);
+    padding: rem(3);
+    font-family: $lato-f;
+    font-style: normal;
+    font-weight: $fw-b;
+    font-size: rem(36);
+    color: $white;
+    display: flex;
+    align-items: center;
+
+    .currency {
+      width: rem(54);
+      height: rem(54);
+      border-radius: rem(100);
+      margin-right: rem(13);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $white;
+      color: $red;
+    }
+  }
+}

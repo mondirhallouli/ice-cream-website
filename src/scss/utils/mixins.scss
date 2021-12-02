@@ -1,0 +1,42 @@
+@use "functions" as *;
+
+// maps for viewport sizes
+// (from this size and up) => 376px, 769px, 1111px
+$breakpoint-up: (
+  "small": rem(376),
+  "medium": rem(769),
+  "large": rem(1111),
+);
+
+// (from this size and down) => 375px, 768px, 1110px
+$breakpoint-down: (
+  "small": rem(375),
+  "medium": rem(768),
+  "large": rem(1110),
+);
+
+@mixin breakpoint-up($value) {
+  @media (min-width: map-get($breakpoint-up, $value)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoint-down, $size)) {
+    @content;
+  }
+}
+
+// viewport for custom minmum widths
+@mixin custom-viewport-up($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+// viewport for custom maximum widths
+@mixin custom-viewport-down($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}

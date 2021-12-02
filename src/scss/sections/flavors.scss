@@ -1,0 +1,48 @@
+@use "../general" as *;
+@use "../utils" as *;
+
+.flavors {
+  padding: 0 rem(36);
+  margin-bottom: rem(60);
+
+  // flavors container styles
+  &__selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(40) rem(80);
+    flex-wrap: wrap;
+  }
+
+  // individual flavor box styles
+  &__option {
+    width: rem(260);
+    height: rem(100);
+    background-color: $red;
+    border-radius: rem(50);
+    padding: 0 rem(10);
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+  }
+
+  // flavor image styles
+  &__option-img {
+    width: rem(100);
+    height: rem(100);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  // flavor name styles
+  &__option-name {
+    display: inline-block;
+    font-family: $roboto-f;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(18);
+    color: $white;
+  }
+}
